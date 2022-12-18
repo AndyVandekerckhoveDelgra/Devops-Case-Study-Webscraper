@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "e0DkUbZ4myTiA1j+oieYKxJmOsFG64l9HRAsZuxlob7KCphk+AVLF6B3TfA+IfD2UkpVEChyKWC44sMCfnH3pQ==",
+  "dgSpecHash": "/f6vpLztV5eXHAcuehn+4zZU/XLsoKcp/MEEUOL1hEVPKuwIWsEPIexGp6C0EOV96EdUtx3t1DFNbD1uJMUTTA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Aguy1\\Desktop\\Webscraping Other\\WebscrapingYoutube\\WebScrapingYoutube.csproj",
+  "projectFilePath": "C:\\Users\\Aguy1\\Desktop\\Nieuwe map (5)\\Webscraping TvTropes\\WebscrapingYoutube\\WebScrapingYoutube.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Aguy1\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
     "C:\\Users\\Aguy1\\.nuget\\packages\\microsoft.csharp\\4.3.0\\microsoft.csharp.4.3.0.nupkg.sha512",

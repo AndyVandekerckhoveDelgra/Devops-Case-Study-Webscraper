@@ -33,27 +33,24 @@ namespace WebScrapingYoutube
 
         static void Main(string[] args)
         {
-            ChromeNetworkConditions conditions = new ChromeNetworkConditions(); //controls internet speed
-            conditions.DownloadThroughput = 999 * 1000; //adjusts the internet's speed; the lower the "45" to slower
-            conditions.UploadThroughput = 10 * 1000; //controls internet speed
-            conditions.Latency = TimeSpan.FromMilliseconds(1);//controls internet speed
+            ChromeNetworkConditions conditions = new ChromeNetworkConditions();
+            conditions.DownloadThroughput = 999 * 1000;
+            conditions.UploadThroughput = 10 * 1000;
+            conditions.Latency = TimeSpan.FromMilliseconds(1);
             int counter1 = 0;
             int counter2 = 1;
             driver = new ChromeDriver();
-            (driver as ChromeDriver).NetworkConditions = conditions; //controls internet speed
-            // Type your search term and enter
-            Console.WriteLine("Enter search term:"); //Vraagt voor zoekterm, user vult het zelf in
+            (driver as ChromeDriver).NetworkConditions = conditions;
+            Console.WriteLine("Enter search term:");
 
-            string searchterm = Console.ReadLine(); //string voor de ingevulde zoekterm
-            //string video = "never gonna give you up";
+            string searchterm = Console.ReadLine();
 
-            driver.Navigate().GoToUrl(String.Format("https://www.youtube.com/results?search_query={0}", searchterm)); //app leidt naar de pagina waar de 
+            driver.Navigate().GoToUrl(String.Format("https://www.youtube.com/results?search_query={0}", searchterm));
 
 
             var titles = FindElements(By.ClassName("yt-simple-endpoint style-scope ytd-video-renderer"));
             var channels = FindElements(By.ClassName("long-byline style-scope ytd-video-renderer"));
             var views = FindElements(By.ClassName("inline-metadata-item style-scope ytd-video-meta-block"));
-            //var a = views.Zip(channels, (t, c) => new { view = t, channel = c });
             string textline = "";
             var collections = views.Zip(titles,  (t, c) => new { title = t, channel = c});
             String jsontext = "[\n";
@@ -109,7 +106,7 @@ namespace WebScrapingYoutube
                 Thread.Sleep(10);
                 counter += 1;
             }
-            return new ReadOnlyCollection<IWebElement>(new List<IWebElement>()); //used if you want to control internet speed (is return null if you're not doing something with the speed of the internet)
+            return new ReadOnlyCollection<IWebElement>(new List<IWebElement>());
 
         }
     }

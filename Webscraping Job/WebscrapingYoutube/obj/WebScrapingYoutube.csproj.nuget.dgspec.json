@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Aguy1\\Desktop\\Webscraping Job\\WebscrapingYoutube\\WebScrapingYoutube.csproj": {}
+    "C:\\Users\\Aguy1\\Desktop\\Nieuwe map (5)\\Webscraping Job\\WebscrapingYoutube\\WebScrapingYoutube.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Aguy1\\Desktop\\Webscraping Job\\WebscrapingYoutube\\WebScrapingYoutube.csproj": {
+    "C:\\Users\\Aguy1\\Desktop\\Nieuwe map (5)\\Webscraping Job\\WebscrapingYoutube\\WebScrapingYoutube.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Aguy1\\Desktop\\Webscraping Job\\WebscrapingYoutube\\WebScrapingYoutube.csproj",
+        "projectUniqueName": "C:\\Users\\Aguy1\\Desktop\\Nieuwe map (5)\\Webscraping Job\\WebscrapingYoutube\\WebScrapingYoutube.csproj",
         "projectName": "WebScrapingYoutube",
-        "projectPath": "C:\\Users\\Aguy1\\Desktop\\Webscraping Job\\WebscrapingYoutube\\WebScrapingYoutube.csproj",
+        "projectPath": "C:\\Users\\Aguy1\\Desktop\\Nieuwe map (5)\\Webscraping Job\\WebscrapingYoutube\\WebScrapingYoutube.csproj",
         "packagesPath": "C:\\Users\\Aguy1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Aguy1\\Desktop\\Webscraping Job\\WebscrapingYoutube\\obj\\",
+        "outputPath": "C:\\Users\\Aguy1\\Desktop\\Nieuwe map (5)\\Webscraping Job\\WebscrapingYoutube\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -31,28 +31,22 @@ namespace WebScrapingYoutube
 
         static void Main(string[] args)
         {
-            ChromeNetworkConditions conditions = new ChromeNetworkConditions(); //controls internet speed
-            conditions.DownloadThroughput = 999 * 1000; //adjusts the internet's speed; the lower the "45" to slower
-            conditions.UploadThroughput = 10 * 1000; //controls internet speed
-            conditions.Latency = TimeSpan.FromMilliseconds(1);//controls internet speed
+            ChromeNetworkConditions conditions = new ChromeNetworkConditions();
+            conditions.DownloadThroughput = 999 * 1000; 
+            conditions.UploadThroughput = 10 * 1000; 
+            conditions.Latency = TimeSpan.FromMilliseconds(1);
 
             int counter1 = 0;
             int counter2 = 1;
             driver = new ChromeDriver();
-            (driver as ChromeDriver).NetworkConditions = conditions; //controls internet speed
-            // Type your search term and enter
+            (driver as ChromeDriver).NetworkConditions = conditions;
             driver.Navigate().GoToUrl(String.Format("https://www.ictjob.be/en/search-it-jobs?keywords=a"));
             Console.WriteLine("Enter search term:");
 
             string searchterm = Console.ReadLine();
-            //string video = "never gonna give you up";
 
             string cookie = String.Format("https://www.ictjob.be/en/search-it-jobs?keywords={0}", searchterm);
             driver.Navigate().GoToUrl(String.Format("https://www.ictjob.be/en/search-it-jobs?keywords={0}", searchterm));
-            //for title: job-title collections
-            //for bedrijf: job-company channels
-            //for map: job-location views
-            //for keywords: job-keywords
 
 
             var titles = FindElements(By.ClassName("job-title search-item-link"));
@@ -117,16 +111,12 @@ namespace WebScrapingYoutube
             while (counter < 6)
             {
                 var elements = driver.FindElements(By.CssSelector(".job-title.search-item-link, .job-company, .job-location, .job-keywords"));
-                //for title: job-title
-                //for bedrijf: job-company
-                //for map: job-location
-                //for keywords: job-keywords
                 if (elements.Count > 0)
                     return elements;
                 Thread.Sleep(10);
                 counter += 1;
             }
-            return new ReadOnlyCollection<IWebElement>(new List<IWebElement>()); //used if you want to control internet speed (is return null if you're not doing something with the speed of the internet)
+            return new ReadOnlyCollection<IWebElement>(new List<IWebElement>()); 
 
         }
     }
